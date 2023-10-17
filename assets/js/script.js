@@ -15,10 +15,17 @@ document.addEventListener("DOMContentLoaded",function(){
     }
 })
 
-
+/** the main game "loop", called when script is fist loaded
+ * and after the user's answer has been processed
+*/
 function runGame(){
+    //create two random Numbers between 1 and 25
+    let num1 = Math.floor(Math.random()*25)+1;
+    let num2 = Math.floor(Math.random()*25)+1;
 
 }
+
+
 function checkAnswer(){
 
 }
