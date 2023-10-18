@@ -14,6 +14,17 @@ document.addEventListener("DOMContentLoaded",function(){
             }
         })
     }
+
+/**
+ * enter key cliked and checking answer
+ */
+document.getElementById('answer-box').addEventListener("keydown",function(event){
+    if(event.key == "Enter"){
+        checkAnswer();
+    }
+})
+
+
     // set defult game as addition
     runGame("addition");
 })
@@ -22,6 +33,11 @@ document.addEventListener("DOMContentLoaded",function(){
  * and after the user's answer has been processed
 */
 function runGame(gameType){
+    // with new run set answer box to empty
+    document.getElementById('answer-box').value = "";
+    // to place cursor at answer box place after loading
+    document.getElementById('answer-box').focus();
+
     //create two random Numbers between 1 and 25
     let num1 = Math.floor(Math.random() *25 ) +1;
     let num2 = Math.floor(Math.random() * 25 ) + 1;
